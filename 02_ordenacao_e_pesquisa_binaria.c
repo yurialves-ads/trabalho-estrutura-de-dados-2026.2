@@ -40,7 +40,16 @@ void ordenar(int vetor[], int tamanho) {
 }
 
 int pesquisaBinaria(int vetor[], int tamanho, int valor) {
-    /* TODO: implementar a pesquisa binária */
+
+    // Define os limites iniciais da pesquisa
+    int inicio = 0;
+    int fim = tamanho - 1;
+
+    // Variável que armazenará a posição central
+    int meio;
+
+    /* TODO: implementar a lógica da pesquisa binária */
+
     return -1;
 }
 
