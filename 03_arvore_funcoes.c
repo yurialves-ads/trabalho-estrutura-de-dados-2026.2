@@ -143,3 +143,19 @@ void emNivel(No *raiz) {
         }
     }
 }
+
+void liberarArvore(No *raiz) {
+
+    // Verifica se o nó existe
+    if (raiz != NULL) {
+
+        // Libera os nós do lado esquerdo
+        liberarArvore(raiz->esquerda);
+
+        // Libera os nós do lado direito
+        liberarArvore(raiz->direita);
+
+        // Libera a memória do nó atual
+        free(raiz);
+    }
+}
