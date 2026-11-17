@@ -25,8 +25,16 @@ void ordenar(int vetor[], int tamanho) {
         // Percorre os elementos que ainda precisam ser ordenados
         for (int j = 0; j < tamanho - i - 1; j++) {
 
-            /* TODO: comparar e trocar os valores */
+            // Verifica se os elementos estão fora de ordem
+            if (vetor[j] > vetor[j + 1]) {
 
+                // Guarda temporariamente o valor atual
+                int auxiliar = vetor[j];
+
+                // Realiza a troca dos valores
+                vetor[j] = vetor[j + 1];
+                vetor[j + 1] = auxiliar;
+            }
         }
     }
 }
