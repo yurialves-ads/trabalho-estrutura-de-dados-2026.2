@@ -71,7 +71,19 @@ void preOrdem(No *raiz) {
 }
 
 void emOrdem(No *raiz) {
-    /* TODO: implementar o percurso em ordem */
+
+    // Verifica se o nó existe
+    if (raiz != NULL) {
+
+        // Percorre primeiro o lado esquerdo
+        emOrdem(raiz->esquerda);
+
+        // Exibe o valor do nó atual
+        printf("%d ", raiz->valor);
+
+        // Percorre o lado direito
+        emOrdem(raiz->direita);
+    }
 }
 
 void posOrdem(No *raiz) {
