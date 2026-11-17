@@ -18,7 +18,17 @@
 #define TAMANHO 10
 
 void ordenar(int vetor[], int tamanho) {
-    /* TODO: implementar a ordenação */
+
+    // Controla as passagens pelo vetor
+    for (int i = 0; i < tamanho - 1; i++) {
+
+        // Percorre os elementos que ainda precisam ser ordenados
+        for (int j = 0; j < tamanho - i - 1; j++) {
+
+            /* TODO: comparar e trocar os valores */
+
+        }
+    }
 }
 
 int pesquisaBinaria(int vetor[], int tamanho, int valor) {
