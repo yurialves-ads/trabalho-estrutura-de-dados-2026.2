@@ -92,9 +92,15 @@ int main() {
     printf("Digite o numero que deseja buscar: ");
     scanf("%d", &valor);
 
+    // Realiza a pesquisa no vetor ordenado
     int posicao = pesquisaBinaria(numeros, TAMANHO, valor);
 
-    /* TODO: mostrar a posição ou "Numero nao encontrado" */
+    // Verifica se o número foi encontrado
+    if (posicao != -1) {
+        printf("Numero encontrado na posicao %d\n", posicao);
+    } else {
+        printf("Numero nao encontrado\n");
+    }
 
     return 0;
 }
