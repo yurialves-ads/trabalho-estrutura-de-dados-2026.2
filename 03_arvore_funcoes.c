@@ -103,5 +103,43 @@ void posOrdem(No *raiz) {
 }
 
 void emNivel(No *raiz) {
-    /* TODO: implementar o percurso em nível */
+
+    // Verifica se a árvore está vazia
+    if (raiz == NULL) {
+        return;
+    }
+
+    // Cria uma fila para armazenar os nós
+    No *fila[10];
+
+    // Inicializa os controles da fila
+    int inicio = 0;
+    int fim = 0;
+
+    // Adiciona a raiz na fila
+    fila[fim] = raiz;
+    fim++;
+
+    // Continua enquanto existirem nós na fila
+    while (inicio < fim) {
+
+        // Retira o próximo nó da fila
+        No *atual = fila[inicio];
+        inicio++;
+
+        // Exibe o valor do nó atual
+        printf("%d ", atual->valor);
+
+        // Adiciona o filho esquerdo na fila
+        if (atual->esquerda != NULL) {
+            fila[fim] = atual->esquerda;
+            fim++;
+        }
+
+        // Adiciona o filho direito na fila
+        if (atual->direita != NULL) {
+            fila[fim] = atual->direita;
+            fim++;
+        }
+    }
 }
