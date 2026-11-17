@@ -39,9 +39,11 @@ int buscarUltimoPar(int vetor[], int tamanho) {
 int main() {
     int numeros[TAMANHO] = { 3, 8, 5, 12, 7, 9, 4, 11, 15, 21 };
 
+    // Realiza a pesquisa sequencial
     int posicao = buscarUltimoPar(numeros, TAMANHO);
 
-    /* TODO: mostrar a posição encontrada */
+    // Exibe a posição encontrada
+    printf("O ultimo numero par esta na posicao %d\n", posicao);
 
     return 0;
 }
