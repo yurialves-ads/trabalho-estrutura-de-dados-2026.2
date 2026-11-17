@@ -87,7 +87,19 @@ void emOrdem(No *raiz) {
 }
 
 void posOrdem(No *raiz) {
-    /* TODO: implementar o percurso pós-ordem */
+
+    // Verifica se o nó existe
+    if (raiz != NULL) {
+
+        // Percorre o lado esquerdo
+        posOrdem(raiz->esquerda);
+
+        // Percorre o lado direito
+        posOrdem(raiz->direita);
+
+        // Exibe o valor do nó atual por último
+        printf("%d ", raiz->valor);
+    }
 }
 
 void emNivel(No *raiz) {
