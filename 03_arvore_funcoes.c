@@ -55,7 +55,19 @@ No* inserir(No *raiz, int valor) {
 }
 
 void preOrdem(No *raiz) {
-    /* TODO: implementar o percurso pré-ordem */
+
+    // Verifica se o nó existe
+    if (raiz != NULL) {
+
+        // Exibe o valor do nó atual
+        printf("%d ", raiz->valor);
+
+        // Percorre o lado esquerdo
+        preOrdem(raiz->esquerda);
+
+        // Percorre o lado direito
+        preOrdem(raiz->direita);
+    }
 }
 
 void emOrdem(No *raiz) {
