@@ -10,25 +10,61 @@ int pilha[MAX];
 int topo = -1;
 
 int estaVazia() {
-    /* TODO: verificar se a pilha está vazia */
+
+    // Verifica se a pilha está vazia
+    if (topo == -1) {
+        return 1;
+    }
+
     return 0;
 }
 
 int estaCheia() {
-    /* TODO: verificar se a pilha está cheia */
+
+    // Verifica se o topo atingiu a última posição do vetor
+    if (topo == MAX - 1) {
+        return 1;
+    }
+
     return 0;
 }
 
 void empilhar(int valor) {
-    /* TODO: inserir o valor no topo da pilha */
+
+    // Verifica se existe espaço disponível
+    if (!estaCheia()) {
+
+        // Avança para a próxima posição
+        topo++;
+
+        // Armazena o valor no topo da pilha
+        pilha[topo] = valor;
+    }
 }
 
 int desempilhar() {
-    /* TODO: remover e retornar o valor do topo */
-    return -1;
+
+    // Verifica se a pilha está vazia
+    if (estaVazia()) {
+        return -1;
+    }
+
+    // Armazena o valor que será removido
+    int valor = pilha[topo];
+
+    // Retorna para a posição anterior
+    topo--;
+
+    return valor;
 }
 
 int verTopo() {
-    /* TODO: retornar o valor do topo sem remover */
-    return -1;
+
+    // Verifica se existem elementos na pilha
+    if (estaVazia()) {
+        return -1;
+    }
+
+    // Retorna o valor do topo sem removê-lo
+    return pilha[topo];
 }
