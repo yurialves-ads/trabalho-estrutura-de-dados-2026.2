@@ -14,8 +14,18 @@ typedef struct No {
 } No;
 
 No* criarNo(int valor) {
-    /* TODO: alocar e inicializar um novo nó */
-    return NULL;
+
+    // Reserva memória para um novo nó
+    No *novo = malloc(sizeof(No));
+
+    // Verifica se a memória foi alocada corretamente
+    if (novo == NULL) {
+        return NULL;
+    }
+
+    /* TODO: inicializar os dados do novo nó */
+
+    return novo;
 }
 
 No* inserir(No *raiz, int valor) {
