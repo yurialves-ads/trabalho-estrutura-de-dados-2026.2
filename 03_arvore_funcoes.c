@@ -34,7 +34,23 @@ No* criarNo(int valor) {
 }
 
 No* inserir(No *raiz, int valor) {
-    /* TODO: inserir o valor na árvore */
+
+    // Cria um novo nó ao encontrar uma posição vazia
+    if (raiz == NULL) {
+        return criarNo(valor);
+    }
+
+    // Insere valores menores no lado esquerdo
+    if (valor < raiz->valor) {
+        raiz->esquerda = inserir(raiz->esquerda, valor);
+    }
+
+    // Insere valores maiores no lado direito
+    else if (valor > raiz->valor) {
+        raiz->direita = inserir(raiz->direita, valor);
+    }
+
+    // Retorna a raiz da árvore
     return raiz;
 }
 
