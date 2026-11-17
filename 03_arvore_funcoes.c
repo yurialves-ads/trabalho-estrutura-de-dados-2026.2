@@ -23,7 +23,12 @@ No* criarNo(int valor) {
         return NULL;
     }
 
-    /* TODO: inicializar os dados do novo nó */
+    // Armazena o valor recebido
+    novo->valor = valor;
+
+    // Inicializa os ponteiros do novo nó
+    novo->esquerda = NULL;
+    novo->direita = NULL;
 
     return novo;
 }
