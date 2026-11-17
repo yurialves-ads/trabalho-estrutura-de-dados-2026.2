@@ -22,7 +22,12 @@ int buscarUltimoPar(int vetor[], int tamanho) {
     // Inicializa a posição como não encontrada
     int posicao = -1;
 
-    /* TODO: implementar a pesquisa sequencial */
+    // Percorre todos os elementos do vetor
+    for (int i = 0; i < tamanho; i++) {
+
+        /* TODO: verificar se o número é par */
+
+    }
 
     return posicao;
 }
@@ -33,11 +38,6 @@ int main() {
     int posicao = buscarUltimoPar(numeros, TAMANHO);
 
     /* TODO: mostrar a posição encontrada */
-    if (posicao != -1) {
-        printf("O ultimo numero par esta na posicao %d\n", posicao);
-    } else {
-        printf("Nenhum numero par encontrado.\n");
-    }
 
     return 0;
 }
