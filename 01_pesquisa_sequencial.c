@@ -25,8 +25,12 @@ int buscarUltimoPar(int vetor[], int tamanho) {
     // Percorre todos os elementos do vetor
     for (int i = 0; i < tamanho; i++) {
 
-        /* TODO: verificar se o número é par */
+        // Verifica se o número é par
+        if (vetor[i] % 2 == 0) {
 
+            // Atualiza a posição do último número par encontrado
+            posicao = i;
+        }
     }
 
     return posicao;
