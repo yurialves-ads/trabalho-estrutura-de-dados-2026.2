@@ -48,8 +48,29 @@ int pesquisaBinaria(int vetor[], int tamanho, int valor) {
     // Variável que armazenará a posição central
     int meio;
 
-    /* TODO: implementar a lógica da pesquisa binária */
+    // Continua enquanto houver elementos para pesquisar
+    while (inicio <= fim) {
 
+        // Calcula a posição central
+        meio = (inicio + fim) / 2;
+
+        // Verifica se o valor foi encontrado
+        if (vetor[meio] == valor) {
+            return meio;
+        }
+
+        // Continua a pesquisa na metade direita
+        if (vetor[meio] < valor) {
+            inicio = meio + 1;
+        }
+
+        // Continua a pesquisa na metade esquerda
+        else {
+            fim = meio - 1;
+        }
+    }
+
+    // Retorna -1 caso o valor não seja encontrado
     return -1;
 }
 
