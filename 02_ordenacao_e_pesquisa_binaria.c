@@ -50,7 +50,14 @@ int main() {
 
     ordenar(numeros, TAMANHO);
 
-    /* TODO: mostrar o vetor ordenado */
+    // Exibe os elementos do vetor após a ordenação
+    printf("Vetor ordenado: ");
+
+    for (int i = 0; i < TAMANHO; i++) {
+        printf("%d ", numeros[i]);
+    }
+
+    printf("\n");
 
     printf("Digite o numero que deseja buscar: ");
     scanf("%d", &valor);
